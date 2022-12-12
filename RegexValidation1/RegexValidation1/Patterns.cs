@@ -9,7 +9,7 @@ namespace RegexValidation1
 {
     internal class Patterns
     {
-        public static string Regex_Pincode = "^[1-9][0-9]{5}$";
+        public static string Regex_Pincode = "^[1-9]*[0-9]{5}$";
         public bool validatePincode(string pincode)
         {
             bool status;

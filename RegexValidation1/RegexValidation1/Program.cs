@@ -10,8 +10,11 @@
 
             Patterns pattern = new Patterns();
             bool result = pattern.validatePincode("400088");
-            Console.WriteLine(result);
-            Console.ReadKey();
+            Console.WriteLine("PIN : " + result);
+
+            bool alphabet_SpecialChar = pattern.validatePincode("A400088");
+            Console.WriteLine("Alphabet : " + alphabet_SpecialChar);
+
         }
     }
 }

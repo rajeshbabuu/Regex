@@ -49,6 +49,28 @@ namespace RegexValidation1
             bool emresult4 = em4.IsMatch("abc_xyz@bridgelabz.co.in");
             Console.WriteLine("UC4 : " + emresult4);
 
+            string emailPat5 = @"^[a-zA-Z0-9]+([._+-][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3})?$";
+            Regex em5 = new Regex(emailPat5);
+            bool emailResult5 = em5.IsMatch("abc@yahoo.com,");
+            bool emailResult6 = em5.IsMatch("abc-100@yahoo.com,");
+            bool emailResult7 = em5.IsMatch("abc.100@yahoo.com");
+            bool emailResult8 = em5.IsMatch("abc111@abc.com,");
+            bool emailResult9 = em5.IsMatch("abc-100@abc.net,");
+            bool emailResult10 = em5.IsMatch("abc.100@abc.com.au");
+            bool emailResult11 = em5.IsMatch("abc@1.com,");
+            bool emailResult12 = em5.IsMatch("abc@gmail.com.com");
+            bool emailResult13 = em5.IsMatch("abc+100@gmail.com");
+            Console.WriteLine("UC-5 ====>");
+            // Console.WriteLine("1 :" + emailResult5);
+            //Console.WriteLine("2 :" + emailResult6);
+            Console.WriteLine("3 : " + emailResult7);
+            //Console.WriteLine("4 :" + emailResult8);
+            //Console.WriteLine("5 : " + emailResult9);
+            Console.WriteLine("6 : " + emailResult10);
+            //Console.WriteLine("7 : " + emailResult11);
+            Console.WriteLine("8 : " + emailResult12);
+            Console.WriteLine("9 : " + emailResult13);
+
         }
     }
 }

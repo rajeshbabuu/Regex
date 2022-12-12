@@ -35,9 +35,10 @@ namespace RegexValidation1
             Regex em = new Regex(emailPattern);
             bool emresult = em.IsMatch("abc.xyz@bridgelabz.co.in");
             bool emresult1 = em.IsMatch("abc@bridgelabz.co");
-            Console.WriteLine("first uc of email is : " + emresult);
+            //Console.WriteLine("first uc of email is : " + emresult);
             Console.WriteLine("Without used Manadatory : " + emresult1);
 
+            Console.WriteLine("\n Second UC : " + emresult1);
 
         }
     }

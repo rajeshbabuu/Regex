@@ -44,6 +44,11 @@ namespace RegexValidation1
             bool emresult3 = em3.IsMatch("abc.@Bridgelabz.co");
             Console.WriteLine("UC3 : " + emresult3);
 
+            string empattern4 = @"^[a-zA-Z]+([._+-][a-z A-Z]+)*@[a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3})?$";
+            Regex em4 = new Regex(empattern4);
+            bool emresult4 = em4.IsMatch("abc_xyz@bridgelabz.co.in");
+            Console.WriteLine("UC4 : " + emresult4);
+
         }
     }
 }

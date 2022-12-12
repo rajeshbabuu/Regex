@@ -31,14 +31,18 @@ namespace RegexValidation1
 
             Console.WriteLine("\n\n============== WELCOME TO REGEX EMAIL PROGRAM ==============\n\n");
 
-            string emailPattern = @"^[a-z A-Z]+([.][a-z A-Z]+)*@[a-z A-Z]+.[a-z A-Z]{2,10}([.][a-z A-Z]{2,3})?$";
-            Regex em = new Regex(emailPattern);
-            bool emresult = em.IsMatch("abc.xyz@bridgelabz.co.in");
-            bool emresult1 = em.IsMatch("abc@bridgelabz.co");
-            //Console.WriteLine("first uc of email is : " + emresult);
-            Console.WriteLine("Without used Manadatory : " + emresult1);
+            string emailPattern = @"^[a-z A-Z]+([.][a-z A-Z]+)*@[a-z A-Z]+.[a-z A-Z]{0,3}([.][a-z A-Z]{2,3})?$";
 
-            Console.WriteLine("\n Second UC : " + emresult1);
+            Regex em = new Regex(emailPattern);
+            bool emresult = em.IsMatch("abc.xyz@bridgelabz.in");
+            bool emresult1 = em.IsMatch("abc@bridgelabz.co");
+            Console.WriteLine("Email is : " + emresult);
+            Console.WriteLine("Without used Manadatory : " + emresult1);
+            string emailPattern1 = @"^[a-z A-Z]+[.]{0,1}([a-z A-Z]+)*@[a-z A-Z]+.[a-z A-Z]{2,10}([.][a-z A-Z]{0,3})?$";
+            //Console.WriteLine("\n UC3 : " + emresult1);
+            Regex em3 = new Regex(emailPattern1);
+            bool emresult3 = em3.IsMatch("abc.@Bridgelabz.co");
+            Console.WriteLine("UC3 : " + emresult3);
 
         }
     }

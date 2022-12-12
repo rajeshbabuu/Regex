@@ -23,6 +23,13 @@ namespace RegexValidation1
             bool result1 = rgobj.IsMatch("400088B");
             Console.WriteLine("Check not last alphabet " + result1);
 
+            string pattern2 = @"^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}";
+
+            Regex rgSpaces = new Regex(pattern2);
+            bool result2 = rgSpaces.IsMatch("400088");
+            Console.WriteLine("Spaces between number " + result2);
+
+
         }
     }
 }
